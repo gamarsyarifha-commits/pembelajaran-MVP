@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mekatronika EduTech</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{background:linear-gradient(135deg,#ffd6eb,#ffeaf5);color:#333}
+header{background:linear-gradient(135deg,#ff4fa3,#ff85c1);color:#fff;text-align:center;padding:35px}
+.container{max-width:1100px;margin:auto;padding:20px}
+.card{background:#fff;border-radius:18px;padding:20px;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+h2{color:#d63384;margin-bottom:12px}
+button{background:#ff4fa3;color:#fff;border:none;padding:10px 15px;border-radius:10px;cursor:pointer;margin:5px}
+button:hover{background:#e63d91}
+#materi{background:#ffe6f2;padding:15px;border-radius:12px;margin-top:10px}
+.option{display:block;margin:8px 0}
+.progress{height:25px;background:#ddd;border-radius:20px;overflow:hidden;margin-top:15px}
+.progress-bar{height:100%;width:0;background:#ff4fa3;color:#fff;text-align:center}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.gallery div{background:#ffe6f2;padding:15px;border-radius:10px;text-align:center}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery div{
+background:#ffe6f2;
+padding:15px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.gallery div:hover{
+transform:translateY(-5px);
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:contain;
+background:white;
+padding:10px;
+border-radius:15px;
+}
+
+.gallery p{
+margin-top:10px;
+font-size:20px;
+font-weight:500;
+}
+#sertifikat{display:none;background:#fff0f7;border:3px solid #ff4fa3;padding:20px;border-radius:15px;margin-top:20px;text-align:center}
+.dark{background:#222;color:#fff}
+footer{background:#ff4fa3;color:white;text-align:center;padding:15px}
+</style>
+</head>
+<body>
+<header>
+<h1>MEKATRONIKA EDUTECH</h1>
+<p>Platform Pembelajaran Digital Mekatronika</p><br>
+<p><b>Syarifha Gamar Al-Hasni</b><br>
+NIM : 24050630029<br>
+Pendidikan Teknik Mekatronika<br>
+Fakultas Teknik<br>
+Universitas Negeri Yogyakarta</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>📚 Materi Pembelajaran</h2>
+<button onclick="tampilMateri('sensor')">Sensor Ultrasonik</button>
+<button onclick="tampilMateri('arduino')">Arduino Uno</button>
+<button onclick="tampilMateri('servo')">Motor Servo</button>
+<button onclick="tampilMateri('motor')">Motor DC</button>
+<button onclick="tampilMateri('relay')">Relay</button>
+<button onclick="tampilMateri('iot')">IoT</button>
+<button onclick="tampilMateri('suhu')">Sensor Suhu</button>
+<div id="materi">Pilih materi yang ingin dipelajari.</div>
+</div>
+
+<section id="galeri" class="card">
+
+<h2>🖼️ Galeri Komponen Mekatronika</h2>
+
+<div class="gallery">
+
+<div>
+<img src="C:\Semester 4\MPV\komponen Mekatronika/arduino.jpg" alt="Arduino Uno">
+<p>Arduino Uno</p>
+</div>
+
+<div>
+<img src="C:\Semester 4\MPV\komponen Mekatronika/hcsr04.jpg" alt="HC-SR04">
+<p>Sensor Ultrasonik HC-SR04</p>
+</div>
+
+<div>
+<img src="C:\Semester 4\MPV\komponen Mekatronika/motorservo.jpg" alt="Servo">
+<p>Motor Servo</p>
+</div>
+
+<div>
+<img src="C:\Semester 4\MPV\komponen Mekatronika/motordc.jpg" alt="Motor DC">
+<p>Motor DC</p>
+</div>
+
+<div>
+<img src="C:\Semester 4\MPV\komponen Mekatronika/relay5v.jpg" alt="Relay">
+<p>Relay 5V</p>
+</div>
+
+<div>
+<img src="C:\Semester 4\MPV\komponen Mekatronika/dht11.jpg" alt="DHT11">
+<p>Sensor DHT11</p>
+</div>
+
+</div>
+
+</section>
+
+<div class="card">
+<h2>📝 Kuis Mekatronika (10 Soal)</h2>
+
+<p>1. Sensor ultrasonik digunakan untuk...</p>
+<label class="option"><input type="radio" name="q1" value="1"> Mengukur jarak</label>
+<label class="option"><input type="radio" name="q1" value="0"> Mengukur suhu</label>
+
+<p>2. Arduino Uno merupakan...</p>
+<label class="option"><input type="radio" name="q2" value="1"> Mikrokontroler</label>
+<label class="option"><input type="radio" name="q2" value="0"> Sensor</label>
+
+<p>3. Motor DC menghasilkan...</p>
+<label class="option"><input type="radio" name="q3" value="1"> Gerakan putar</label>
+<label class="option"><input type="radio" name="q3" value="0"> Cahaya</label>
+
+<p>4. Relay berfungsi sebagai...</p>
+<label class="option"><input type="radio" name="q4" value="1"> Saklar elektronik</label>
+<label class="option"><input type="radio" name="q4" value="0"> Sensor</label>
+
+<p>5. IoT adalah singkatan dari...</p>
+<label class="option"><input type="radio" name="q5" value="1"> Internet of Things</label>
+<label class="option"><input type="radio" name="q5" value="0"> Interface of Things</label>
+
+<p>6. Servo bergerak dengan...</p>
+<label class="option"><input type="radio" name="q6" value="1"> Sudut presisi</label>
+<label class="option"><input type="radio" name="q6" value="0"> Acak</label>
+
+<p>7. DHT11 digunakan untuk...</p>
+<label class="option"><input type="radio" name="q7" value="1"> Suhu dan kelembapan</label>
+<label class="option"><input type="radio" name="q7" value="0"> Jarak</label>
+
+<p>8. Bahasa Arduino berbasis...</p>
+<label class="option"><input type="radio" name="q8" value="1"> C/C++</label>
+<label class="option"><input type="radio" name="q8" value="0"> HTML</label>
+
+<p>9. Sensor termasuk perangkat...</p>
+<label class="option"><input type="radio" name="q9" value="1"> Input</label>
+<label class="option"><input type="radio" name="q9" value="0"> Output</label>
+
+<p>10. Contoh aktuator adalah...</p>
+<label class="option"><input type="radio" name="q10" value="1"> Motor Servo</label>
+<label class="option"><input type="radio" name="q10" value="0"> Sensor Ultrasonik</label>
+
+<button onclick="cekNilai()">Lihat Nilai</button>
+<button onclick="toggleDark()">Dark Mode</button>
+
+<div class="progress"><div class="progress-bar" id="bar">0%</div></div>
+<div id="hasil"></div>
+
+<div id="sertifikat">
+<h2>SERTIFIKAT KELULUSAN</h2>
+<p>Diberikan kepada</p>
+<h3>Syarifha Gamar Al-Hasni</h3>
+<p>Telah menyelesaikan pembelajaran Mekatronika EduTech dengan nilai memuaskan.</p>
+</div>
+</div>
+</div>
+
+<footer>© 2026 Mekatronika EduTech - Universitas Negeri Yogyakarta</footer>
+
+<script>
+function tampilMateri(p){
+const data={
+sensor:"Sensor ultrasonik mengukur jarak menggunakan gelombang suara.",
+arduino:"Arduino Uno adalah papan mikrokontroler ATmega328P.",
+servo:"Motor servo bergerak pada sudut tertentu dengan presisi tinggi.",
+motor:"Motor DC mengubah energi listrik menjadi energi gerak.",
+relay:"Relay adalah saklar elektronik yang dikendalikan listrik.",
+iot:"IoT menghubungkan perangkat ke internet.",
+suhu:"Sensor suhu digunakan untuk mendeteksi temperatur."
+};
+document.getElementById("materi").innerHTML=data[p];
+}
+
+function cekNilai(){
+let nilai=0;
+for(let i=1;i<=10;i++){
+let j=document.querySelector('input[name="q'+i+'"]:checked');
+if(j) nilai+=parseInt(j.value);
+}
+let skor=nilai*10;
+document.getElementById("hasil").innerHTML="Nilai Anda: "+skor;
+document.getElementById("bar").style.width=skor+"%";
+document.getElementById("bar").innerHTML=skor+"%";
+if(skor>=80){document.getElementById("sertifikat").style.display="block";}
+}
+
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+</script>
+</body>
+</html>
